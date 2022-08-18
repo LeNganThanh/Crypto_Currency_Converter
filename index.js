@@ -20,10 +20,9 @@ convertBtn.addEventListener("click", () => {
   const currencyConvert = `https://api.coinbase.com/v2/prices/${cryptoVal}-${currencyVal}/spot`;
   fetch(currencyConvert)
     .then(response => response.json())
-    .then(data => {
-      const getDataVal = data.data.amount;
+    .then(result => {
+      const getDataVal = result.data.amount;
       currencyAmt.value = getDataVal * cryptoAmt;
-      console.log(data.data.amount);
     })
     .catch(err => {
       alert("Invalid base currency!");
