@@ -6,6 +6,7 @@ const heading = document.querySelector("h1");
 heading.style.margin = "3rem 0";
 
 const convertBtn = document.querySelector(".btn");
+
 convertBtn.addEventListener("click", () => {
   const crypto = document.getElementById("inputGroupSelect01");
   const cryptoVal = crypto.options[crypto.selectedIndex].text;
