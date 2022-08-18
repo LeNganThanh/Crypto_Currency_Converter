@@ -16,7 +16,6 @@ convertBtn.addEventListener("click", () => {
   const cryptoAmt = document.querySelector(".crypto-amt").value;
   const currencyAmt = document.querySelector(".currency-amt");
 
-  // const currencyConvert = "https://api.coinbase.com/v2/prices/LTC-EUR/spot";
   const currencyConvert = `https://api.coinbase.com/v2/prices/${cryptoVal}-${currencyVal}/spot`;
   fetch(currencyConvert)
     .then(response => {
