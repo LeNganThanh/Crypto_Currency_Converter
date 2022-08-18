@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Crypto currency converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Crypto-Rate</h1>
+
+      <div class="input-group mb-4">
+        <label
+          class="input-group-text bg-primary text-light"
+          style="font-size: 1.3rem"
+          for="inputGroupSelect01"
+          >Crypto currency</label
+        >
+        <select class="form-select" style="width: 80%" id="inputGroupSelect01">
+          <option selected>Choose....</option>
+          <option value="1">BTC</option>
+          <option value="2">XRP</option>
+          <option value="3">EOS</option>
+          <option value="4">LTC</option>
+          <option value="5">ETH</option>
+        </select>
+      </div>
+      <div class="input-group mb-4" style="width: 99%">
+        <input
+          type="text"
+          class="form-control crypto-amt"
+          aria-label="Dollar amount (with dot and two decimal places)"
+          placeholder="0"
+        />
+      </div>
+      <div class="input-group mb-4">
+        <label
+          class="input-group-text bg-danger text-light"
+          style="font-size: 1.3rem"
+          for="inputGroupSelect01"
+          >Currency</label
+        >
+        <select class="form-select" style="width: 87%" id="inputGroupSelect02">
+          <option selected>Choose....</option>
+          <option value="1">USD</option>
+          <option value="2">EUR</option>
+          <option value="3">GBP</option>
+          <option value="4">AUD</option>
+          <option value="5">HK</option>
+        </select>
+      </div>
+
+      <div class="input-group mb-4" style="width: 99%">
+        <input
+          type="text"
+          class="form-control bg-light currency-amt"
+          aria-label="Dollar amount (with dot and two decimal places)"
+        />
+      </div>
+      <button type="button" style="font-size: 1.3rem" class="btn btn-primary">
+        Convert
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
