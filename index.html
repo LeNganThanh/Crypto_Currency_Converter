@@ -10,6 +10,11 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <style>
+      select:active {
+        background-color: gray;
+      }
+    </style>
     <title>Crypto currency converter</title>
   </head>
   <body>
@@ -22,13 +27,17 @@
           for="inputGroupSelect01"
           >Crypto currency</label
         >
-        <select class="form-select" style="width: 80%" id="inputGroupSelect01">
+        <select
+          class="form-select selectpicker"
+          style="width: 80%"
+          id="inputGroupSelect01"
+        >
           <option selected>Choose....</option>
-          <option value="1">BTC</option>
-          <option value="2">XRP</option>
-          <option value="3">EOS</option>
-          <option value="4">LTC</option>
-          <option value="5">ETH</option>
+          <option value="BTC">BTC</option>
+          <option value="XRP">XRP</option>
+          <option value="EOS">EOS</option>
+          <option value="LTC">LTC</option>
+          <option value="ETH">ETH</option>
         </select>
       </div>
       <div class="input-group mb-4" style="width: 99%">
@@ -46,13 +55,17 @@
           for="inputGroupSelect01"
           >Currency</label
         >
-        <select class="form-select" style="width: 87%" id="inputGroupSelect02">
+        <select
+          class="form-select selectpicker"
+          style="width: 87%"
+          id="inputGroupSelect02"
+        >
           <option selected>Choose....</option>
-          <option value="1">USD</option>
-          <option value="2">EUR</option>
-          <option value="3">GBP</option>
-          <option value="4">AUD</option>
-          <option value="5">HK</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="HK">HK</option>
         </select>
       </div>
 
@@ -73,6 +86,7 @@
         Convert
       </button>
     </div>
+    <!-- JavaScript Bundle with Popper -->
     <script src="index.js"></script>
   </body>
 </html>

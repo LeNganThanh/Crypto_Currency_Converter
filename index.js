@@ -7,7 +7,9 @@ heading.style.margin = "3rem 0";
 
 const convertBtn = document.querySelector(".btn");
 
-convertBtn.addEventListener("click", () => {
+const optionsChange = Array.from(document.getElementsByTagName("option"));
+
+convertBtn.addEventListener("click", e => {
   const crypto = document.getElementById("inputGroupSelect01");
   const cryptoVal = crypto.options[crypto.selectedIndex].text;
 
