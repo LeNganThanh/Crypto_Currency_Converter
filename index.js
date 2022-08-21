@@ -32,10 +32,9 @@ async function getData(cry, curr) {
     const response = await getVal.json();
     responseVal = response.data.amount;
   } catch (error) {
-    alert(error);
+    alert("Invalid base currency!");
     location.reload();
   }
-  console.log(responseVal);
   return responseVal;
 }
 
@@ -55,6 +54,8 @@ convertBtn.addEventListener("click", e => {
   //get data from async function
   getData(cryptoVal, currencyVal).then(result => {
     const amountData = +result;
-    currencyAmt.value = amountData * cryptoAmt;
+    currencyAmt.value = Number(
+      (amountData * cryptoAmt).toFixed(2)
+    ).toLocaleString();
   });
 });
