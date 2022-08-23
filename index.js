@@ -1,4 +1,10 @@
 "use strict";
+//Variables declare
+const crypto = document.getElementById("inputGroupSelect01");
+const currency = document.getElementById("inputGroupSelect02");
+const cryptoInput = document.querySelector(".crypto-amt");
+const currencyAmt = document.querySelector(".currency-amt");
+const convertBtn = document.querySelector(".btn");
 
 //common setup
 document.body.style.fontSize = "1.3rem";
@@ -38,18 +44,12 @@ async function getData(cry, curr) {
   return responseVal;
 }
 
-const convertBtn = document.querySelector(".btn");
-
 //catch the "click" event of the button
 convertBtn.addEventListener("click", e => {
-  const crypto = document.getElementById("inputGroupSelect01");
-  const cryptoVal = crypto.options[crypto.selectedIndex].text;
+  const cryptoVal = crypto.value;
+  const cryptoAmt = cryptoInput.value;
 
-  const currency = document.getElementById("inputGroupSelect02");
   const currencyVal = currency.options[currency.selectedIndex].text;
-
-  const cryptoAmt = document.querySelector(".crypto-amt").value;
-  const currencyAmt = document.querySelector(".currency-amt");
 
   //get data from async function
   getData(cryptoVal, currencyVal).then(result => {
@@ -59,3 +59,21 @@ convertBtn.addEventListener("click", e => {
     ).toLocaleString();
   });
 });
+
+//solution
+/* 
+const apiUrl = 'https://api.coinbase.com/v2/prices';
+const convert = function() {
+     const url = `${apiUrl}/${crypto.value}-${currency.value}/spot`;
+     fetch(url)
+     .then(response => response.json())
+     .then(data => {
+         currencyAmt.value = ((Number(cryptoInput.value) * Number(data.data.amount)).toFixed(2));
+     });
+ }
+
+submitBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    convert();
+});
+*/
